@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6390d727-91ea-47c4-ae05-a69af2c64476" name="Changes" comment="exo 1 - assertEquals et NotEquals sur les fonctions TD d'intro">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter_api_5_10_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Personne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PersonneTest.java" afterDir="false" />
+    <list default="true" id="6390d727-91ea-47c4-ae05-a69af2c64476" name="Changes" comment="exo 2 - fichier de tests pour la classe Personne">
+      <change afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Personne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PersonneTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.PersonneTest">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TD_Tests_Java" />
@@ -80,9 +79,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PersonneTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PersonneTest" />
       </list>
     </recent_temporary>
   </component>
@@ -96,7 +95,8 @@
       <updated>1709807448436</updated>
       <workItem from="1709807451125" duration="5161000" />
       <workItem from="1709849033163" duration="1729000" />
-      <workItem from="1709890019976" duration="3426000" />
+      <workItem from="1709890019976" duration="3820000" />
+      <workItem from="1709934771763" duration="3574000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1709808015273</created>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709825068573</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="exo 2 - fichier de tests pour la classe Personne">
+      <created>1709893676476</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709893676476</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +128,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="exo 1 - assertEquals et NotEquals sur les fonctions TD d'intro" />
-    <option name="LAST_COMMIT_MESSAGE" value="exo 1 - assertEquals et NotEquals sur les fonctions TD d'intro" />
+    <MESSAGE value="exo 2 - fichier de tests pour la classe Personne" />
+    <option name="LAST_COMMIT_MESSAGE" value="exo 2 - fichier de tests pour la classe Personne" />
   </component>
 </project>

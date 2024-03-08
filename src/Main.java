@@ -2,21 +2,7 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        /* Exercice 2
-        Couvrir l’ensemble des fonctions (getters + setters + toString) de l’exercice sur les Personnes avec
-        des tests unitaires. */
-
-        Personne cedric = new Personne("Molinari", "Cédric", 39);
-        Personne laurence = new Personne("Molinari", "Laurence", 46);
-        System.out.println(cedric);
-        System.out.println(laurence);
-
-    }
-
-
-    /*
-
-Exercice 3
+        /* Exercice 3
 Écrivez un programme qui imprime les nombres de 1 à 100. Mais pour les multiples de trois, imprimez "Fizz" à la place du nombre et pour les multiples de cinq, imprimez "Buzz". Pour les nombres qui sont à la fois multiples de trois et de cinq, imprimez "FizzBuzz".
 
 Passez par une fonction qui génère la chaîne de caractères à renvoyer.
@@ -41,9 +27,32 @@ FizzBuzz
 16
 …
 
+Faites un test unitaire pour tester cette fonction. */
 
-Faites un test unitaire pour tester cette fonction.
 
+    compterJusqueCent();
+
+    }
+    public static String determinerFizzBuzz(int n) {
+       if (n % 3 == 0 && n % 5 == 0) {
+           return "FizzBuzz";
+       } else if (n % 5 == 0) {
+           return "Buzz";
+       } else if (n % 3 == 0) {
+           return "Fizz";
+       } else {
+         return String.valueOf(n);
+       }
+    }
+
+    public static void compterJusqueCent() {
+        IntStream.rangeClosed(1, 100)
+                .mapToObj(Main::determinerFizzBuzz)
+                .forEach(System.out::println);
+    }
+
+
+    /*
 Exercice 4
 Créer une méthode qui prend une chaîne et un dictionnaire, et remplace chaque clé du dictionnaire précédée et suffixée par un signe dollar, par la valeur correspondante du dictionnaire.
 
