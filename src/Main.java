@@ -2,29 +2,20 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        /* Exercice 1
+        /* Exercice 2
+        Couvrir l’ensemble des fonctions (getters + setters + toString) de l’exercice sur les Personnes avec
+        des tests unitaires. */
 
-Écrire deux tests unitaires par fonctions développées dans le TD sur les fonctions. (Un avec assertEquals, un avec
-assertNotEquals) */
+        Personne cedric = new Personne("Molinari", "Cédric", 39);
+        Personne laurence = new Personne("Molinari", "Laurence", 46);
+        System.out.println(cedric);
+        System.out.println(laurence);
 
     }
-    public static long carreNombre(int nombre) {
-        return (long) nombre * nombre;
-    }
 
-    public static int nombrePlusGrand(int a, int b) {
-        IntStream nombres = IntStream.of(a, b);
-        return nombres.max().getAsInt();
-    }
-
-    public static int sommeTableau(int... nombres) {
-        return IntStream.of(nombres)
-                .sum();
-    }
 
     /*
-Exercice 2
-Couvrir l’ensemble des fonctions (getters + setters + toString) de l’exercice sur les Personnes avec des tests unitaires.
+
 Exercice 3
 Écrivez un programme qui imprime les nombres de 1 à 100. Mais pour les multiples de trois, imprimez "Fizz" à la place du nombre et pour les multiples de cinq, imprimez "Buzz". Pour les nombres qui sont à la fois multiples de trois et de cinq, imprimez "FizzBuzz".
 
