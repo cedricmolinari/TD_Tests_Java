@@ -1,26 +1,20 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainTest {
-    @Test
-    void testDeterminerFizz() {
-        assertEquals("Fizz", Main.determinerFizzBuzz(3));
-        assertEquals("Fizz", Main.determinerFizzBuzz(6));
+    static Map<String, String> remplacements = new HashMap<>();
+    static {
+        remplacements.put("temp", "temporary");
+        remplacements.put("name", "John Doe");
     }
+
     @Test
-    void testDeterminerBuzz() {
-        assertEquals("Buzz", Main.determinerFizzBuzz(5));
-        assertEquals("Buzz", Main.determinerFizzBuzz(10));
-    }
-    @Test
-    void testDeterminerFizzBuzz() {
-        assertEquals("FizzBuzz", Main.determinerFizzBuzz(15));
-        assertEquals("FizzBuzz", Main.determinerFizzBuzz(30));
-    }
-    @Test
-    void testDeterminerNombre() {
-        assertEquals("1", Main.determinerFizzBuzz(1));
-        assertEquals("7", Main.determinerFizzBuzz(7));
+    public void testTraitementTexte() {
+        assertEquals("temporary here comes the name John Doe",
+                Main.traitementTexte("$temp$ here comes the name $name$", remplacements));
     }
 }
