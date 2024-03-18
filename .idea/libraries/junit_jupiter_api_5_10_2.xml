@@ -5,6 +5,7 @@
       <root url="jar://$USER_HOME$/Downloads/junit-jupiter-engine-5.10.2.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/junit-platform-commons-1.10.2.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/junit-platform-engine-1.10.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/junit-jupiter-params-5.10.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

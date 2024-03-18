@@ -1,20 +1,119 @@
 import org.junit.jupiter.api.Test;
-
-import java.util.HashMap;
-import java.util.Map;
-
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.stream.Stream;
 
 public class MainTest {
-    static Map<String, String> remplacements = new HashMap<>();
-    static {
-        remplacements.put("temp", "temporary");
-        remplacements.put("name", "John Doe");
+    private static Stream<Object[]> fournirDonnesDeTest() {
+        return Stream.of(
+                new Object[]{1, "I"},
+                new Object[]{2, "II"},
+                new Object[]{3, "III"},
+                new Object[]{4, "IV"},
+                new Object[]{5, "V"},
+                new Object[]{6, "VI"},
+                new Object[]{7, "VII"},
+                new Object[]{8, "VIII"},
+                new Object[]{9, "IX"},
+                new Object[]{10, "X"},
+                new Object[]{11, "XI"},
+                new Object[]{12, "XII"},
+                new Object[]{13, "XIII"},
+                new Object[]{14, "XIV"},
+                new Object[]{15, "XV"},
+                new Object[]{16, "XVI"},
+                new Object[]{17, "XVII"},
+                new Object[]{18, "XVIII"},
+                new Object[]{19, "XIX"},
+                new Object[]{20, "XX"},
+                new Object[]{21, "XXI"},
+                new Object[]{22, "XXII"},
+                new Object[]{23, "XXIII"},
+                new Object[]{24, "XXIV"},
+                new Object[]{25, "XXV"},
+                new Object[]{26, "XXVI"},
+                new Object[]{27, "XXVII"},
+                new Object[]{28, "XXVIII"},
+                new Object[]{29, "XXIX"},
+                new Object[]{30, "XXX"},
+                new Object[]{31, "XXXI"},
+                new Object[]{32, "XXXII"},
+                new Object[]{33, "XXXIII"},
+                new Object[]{34, "XXXIV"},
+                new Object[]{35, "XXXV"},
+                new Object[]{36, "XXXVI"},
+                new Object[]{37, "XXXVII"},
+                new Object[]{38, "XXXVIII"},
+                new Object[]{39, "XXXIX"},
+                new Object[]{40, "XL"},
+                new Object[]{41, "XLI"},
+                new Object[]{42, "XLII"},
+                new Object[]{43, "XLIII"},
+                new Object[]{44, "XLIV"},
+                new Object[]{45, "XLV"},
+                new Object[]{46, "XLVI"},
+                new Object[]{47, "XLVII"},
+                new Object[]{48, "XLVIII"},
+                new Object[]{49, "XLIX"},
+                new Object[]{50, "L"},
+                new Object[]{51, "LI"},
+                new Object[]{52, "LII"},
+                new Object[]{53, "LIII"},
+                new Object[]{54, "LIV"},
+                new Object[]{55, "LV"},
+                new Object[]{56, "LVI"},
+                new Object[]{57, "LVII"},
+                new Object[]{58, "LVIII"},
+                new Object[]{59, "LIX"},
+                new Object[]{60, "LX"},
+                new Object[]{61, "LXI"},
+                new Object[]{62, "LXII"},
+                new Object[]{63, "LXIII"},
+                new Object[]{64, "LXIV"},
+                new Object[]{65, "LXV"},
+                new Object[]{66, "LXVI"},
+                new Object[]{67, "LXVII"},
+                new Object[]{68, "LXVIII"},
+                new Object[]{69, "LXIX"},
+                new Object[]{70, "LXX"},
+                new Object[]{71, "LXXI"},
+                new Object[]{72, "LXXII"},
+                new Object[]{73, "LXXIII"},
+                new Object[]{74, "LXXIV"},
+                new Object[]{75, "LXXV"},
+                new Object[]{76, "LXXVI"},
+                new Object[]{77, "LXXVII"},
+                new Object[]{78, "LXXVIII"},
+                new Object[]{79, "LXXIX"},
+                new Object[]{80, "LXXX"},
+                new Object[]{81, "LXXXI"},
+                new Object[]{82, "LXXXII"},
+                new Object[]{83, "LXXXIII"},
+                new Object[]{84, "LXXXIV"},
+                new Object[]{85, "LXXXV"},
+                new Object[]{86, "LXXXVI"},
+                new Object[]{87, "LXXXVII"},
+                new Object[]{88, "LXXXVIII"},
+                new Object[]{89, "LXXXIX"},
+                new Object[]{90, "XC"},
+                new Object[]{91, "XCI"},
+                new Object[]{92, "XCII"},
+                new Object[]{93, "XCIII"},
+                new Object[]{94, "XCIV"},
+                new Object[]{95, "XCV"},
+                new Object[]{96, "XCVI"},
+                new Object[]{97, "XCVII"},
+                new Object[]{98, "XCVIII"},
+                new Object[]{99, "XCIX"},
+                new Object[]{100, "C"}
+        );
     }
 
-    @Test
-    public void testTraitementTexte() {
-        assertEquals("temporary here comes the name John Doe",
-                Main.traitementTexte("$temp$ here comes the name $name$", remplacements));
+    @ParameterizedTest
+    @MethodSource("fournirDonnesDeTest")
+    public void testConvertirEnChiffresRomains(int nombre, String attendu) {
+        assertEquals(attendu, Main.convertirEnChiffresRomains(nombre),
+                "Doit convertir " + nombre + " en " + attendu);
     }
 }
